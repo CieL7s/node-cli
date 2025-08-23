@@ -1,0 +1,40 @@
+{
+  "name": "js-cli-wrapper",
+  "version": "1.0.0",
+  "description": "A comprehensive JavaScript CLI wrapper for running system commands",
+  "main": "cli.js",
+  "bin": {
+    "jcli": "./cli.js"
+  },
+  "scripts": {
+    "start": "node cli.js",
+    "test": "node test.js",
+    "install-global": "npm install -g .",
+    "uninstall-global": "npm uninstall -g js-cli-wrapper"
+  },
+  "keywords": [
+    "cli",
+    "wrapper",
+    "terminal",
+    "command-line",
+    "javascript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "bun": "^1.2.20",
+    "cloudflared": "^0.7.1",
+    "nodemon": "^3.1.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CieL7s/node-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CieL7s/node-cli/issues"
+  },
+  "homepage": "https://github.com/CieL7s/node-cli#readme"
+}
