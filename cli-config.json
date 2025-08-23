@@ -1,0 +1,70 @@
+{
+    "environment": {
+        "NODE_ENV": "production",
+        "PTERO_SERVER": "true",
+        "SERVER_MEMORY": "1024",
+        "SERVER_IP": "0.0.0.0",
+        "SERVER_PORT": "3000"
+    },
+    "startupCommand": "npm start",
+    "allowedCommands": [
+        "all"
+    ],
+    "pteroCommands": {
+        "start-bot": {
+            "description": "Start WhatsApp bot",
+            "command": "npm start"
+        },
+        "restart-bot": {
+            "description": "Restart WhatsApp bot",
+            "command": "pm2 restart all"
+        },
+        "install-deps": {
+            "description": "Install all dependencies",
+            "command": "npm install && pip3 install -r requirements.txt"
+        },
+        "update-bot": {
+            "description": "Update bot from git",
+            "command": "git pull && npm install"
+        },
+        "backup-data": {
+            "description": "Backup bot data",
+            "command": "tar -czf backup-$(date +%Y%m%d).tar.gz sessions/ database/ config/"
+        },
+        "monitor": {
+            "description": "Monitor system resources",
+            "command": "htop"
+        }
+    },
+    "aliases": {
+        "start": "start-bot",
+        "restart": "restart-bot",
+        "install": "install-deps",
+        "update": "update-bot",
+        "backup": "backup-data",
+        "sys": "neofetch",
+        "mem": "free",
+        "cpu": "top"
+    },
+    "autoStart": true,
+    "maxMemory": "1024M",
+    "nodeVersions": [
+        "23",
+        "22",
+        "21",
+        "20",
+        "19",
+        "18",
+        "17",
+        "16",
+        "14",
+        "12"
+    ],
+    "supportedOS": [
+        "ubuntu",
+        "alpine",
+        "debian",
+        "centos"
+    ],
+    "eggVersion": "R6.2.1"
+}
