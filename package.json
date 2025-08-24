@@ -1,33 +1,32 @@
 {
-  "name": "js-cli-wrapper",
-  "version": "1.0.0",
-  "description": "A comprehensive JavaScript CLI wrapper for running system commands",
+  "name": "cielv7-terminal",
+  "version": "2.0.0",
+  "description": "An advanced, stylized terminal interface with colorful ASCII art, system monitoring, and command execution capabilities",
   "main": "cli.js",
-  "bin": {
-    "jcli": "./cli.js"
-  },
   "scripts": {
     "start": "node cli.js",
-    "test": "node test.js",
-    "install-global": "npm install -g .",
-    "uninstall-global": "npm uninstall -g js-cli-wrapper"
+    "dev": "node cli.js",
+    "build": "javascript-obfuscator cli.js --output ./dist/cli.js --compact true --control-flow-flattening true",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "cli",
-    "wrapper",
     "terminal",
-    "command-line",
-    "javascript"
+    "cli",
+    "system-info",
+    "ascii-art",
+    "command-interface",
+    "system-monitoring",
+    "node-terminal",
+    "interactive-cli"
   ],
-  "author": "Your Name",
-  "license": "MIT",
-  "engines": {
-    "node": ">=12.0.0"
+  "author": {
+    "name": "CieL7s",
+    "url": "https://github.com/CieL7s"
   },
-  "dependencies": {
-    "bun": "^1.2.20",
-    "cloudflared": "^0.7.1",
-    "nodemon": "^3.1.10"
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": {
+    "node": ">=14.0.0"
   },
   "repository": {
     "type": "git",
@@ -36,5 +35,31 @@
   "bugs": {
     "url": "https://github.com/CieL7s/node-cli/issues"
   },
-  "homepage": "https://github.com/CieL7s/node-cli#readme"
+  "homepage": "https://github.com/CieL7s/node-cli#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "javascript-obfuscator": "^4.0.2"
+  },
+  "bin": {
+    "cielv7": "./cli.js"
+  },
+  "preferGlobal": true,
+  "os": [
+    "linux",
+    "darwin",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64",
+    "ia32"
+  ],
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "files": [
+    "dist/cli.js",
+    "README.md"
+  ]
 }
